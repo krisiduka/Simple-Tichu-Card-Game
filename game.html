@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tichu</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles.css">
+    <script type="text/javascript" src="./JSfunctions.js"></script>
+</head>
+<body class="container" onload="Game()">
+    <form>
+        <div class="row mt-3">
+            <input type="button" onclick="Exit()" value="Αποσύνδεση" class="col-md-2 offset-11 btn btn-danger">
+        </div>
+
+        <div class="row mt-3">
+            <img src="./imgs/player.png" class="col-md-1 offset-5">
+            <span id="point1">Πόντοι 1</span>
+        </div>
+        <div class="form-group">
+            
+            <label for="cards1" class="col-sm-3 col-form-label">
+                1ος Παίκτης <span class="badge badge-secondary"> Παίζεις</span>
+            </label>
+            
+            <table class="cards" id="card">
+                <tr>
+                    <td id="1"></td>
+                    <td id="2"></td>
+                    <td id="3"></td>
+                    <td id="4"></td>
+                    <td id="5"></td>
+                    <td id="6"></td>
+                    <td id="7"></td>
+                    <td id="8"></td>
+                    <td id="9"></td>
+                    <td id="10"></td>
+                    <td id="11"></td>
+                    <td id="12"></td>
+                    <td id="13"></td>
+                    <td id="14"></td>
+                    <td id="15"></td>
+                    <td id="16"></td>
+                    <td id="17"></td>
+                    <td id="18"></td>
+                    <td id="19"></td>
+                    <td id="20"></td>
+                    <td id="21"></td>
+                    <td id="22"></td>
+                    <td id="23"></td>
+                    <td id="24"></td>
+                    <td id="25"></td>
+                    <td id="26"></td>
+                    <td id="27"></td>
+                    <td id="28"></td>
+                </tr>
+            </table>
+        </div>
+        <br />
+        <div class="form-group">
+            <table class="col-md-9 offset-2" style="border: black 1px solid; width: 70%; height: 100px;">
+                <tr>
+                    <td id="c1"></td>
+                    <td id="c2"></td>
+                    <td id="c3"></td>
+                    <td id="c4"></td>
+                    <td id="c5"></td>
+                    <td id="c6"></td>
+                    <td id="c7"></td>
+                    <td id="c8"></td>
+                    <td id="c9"></td>
+                    <td id="c10"></td>
+                    <td id="c11"></td>
+                    <td id="c12"></td>
+                    <td id="c13"></td>
+                    <td id="c14"></td>
+                </tr>
+            </table>
+            <br />
+            
+           <div class="row mt-3 d-flex align-items-center" >
+                <div class="col-md form-group" >
+                    <img src="./imgs/card.jpg" >
+                    <input class="col-md-2 btn btn-success" type="button" value="Μοίρασε" style="position: absolute;left: 40%;"/>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="cards2" class="col-sm-3 col-form-label" id="name2">
+                    2ος Παίκτης <span class="badge badge-secondary hide-element"> Παίζεις</span>
+                </label>
+
+                <table id="cards2" class="cards">
+                    <td id="29"></td>
+                    <td id="30"></td>
+                    <td id="31"></td>
+                    <td id="32"></td>
+                    <td id="33"></td>
+                    <td id="34"></td>
+                    <td id="35"></td>
+                    <td id="36"></td>
+                    <td id="37"></td>
+                    <td id="38"></td>
+                    <td id="39"></td>
+                    <td id="40"></td>
+                    <td id="41"></td>
+                    <td id="42"></td>
+                    <td id="43"></td>
+                    <td id="44"></td>
+                    <td id="45"></td>
+                    <td id="46"></td>
+                    <td id="47"></td>
+                    <td id="48"></td>
+                    <td id="49"></td>
+                    <td id="50"></td>
+                    <td id="51"></td>
+                    <td id="52"></td>
+                    <td id="53"></td>
+                    <td id="54"></td>
+                    <td id="55"></td>
+                    <td id="56"></td>
+                </table>
+            </div>
+        </div>
+        <div class="form-group">
+            <img src="./imgs/player.png" class="col-md-1 offset-5">
+            <span id="point2">Πόντοι 2</span>
+        </div>
+    </form>
+</body>
+</html>

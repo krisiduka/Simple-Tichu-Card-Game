@@ -1,0 +1,36 @@
+body {
+    background-image: url(imgs/felt.png);
+    background-repeat: no-repeat;
+}
+
+.mt-5 {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: x-large;
+}
+
+/* .container {
+    background-color: limegreen;
+} */
+
+.col-md-5 {
+    height: 70px;
+    width: 70px;
+}
+
+.cards {
+    border: black 1px solid;
+    width: 100%;
+    height: 100px;
+}
+
+#playingcards {
+    position:absolute;
+    top:40%;
+    left: 4%;
+}
+
+.hide-element {
+    display: none;
+}
+

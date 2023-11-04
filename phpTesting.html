@@ -1,0 +1,186 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PHP testing file</title>
+
+    <script>
+        function test() {
+
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    var response = JSON.parse(xhttp.responseText);
+                   //console.log(response);
+                   // console.log(xhttp.responseText);
+                    document.getElementById('playerAScore').innerHTML = '<strong>TEST Show Player A score:</strong> ' + response;
+                }
+            };
+            xhttp.open("GET", "./DBfunctions.php?query=player_A_score", true);
+            xhttp.send();
+
+
+            var xhttp1 = new XMLHttpRequest();
+            xhttp1.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    var response1 = JSON.parse(xhttp1.responseText);
+                    document.getElementById('matchStatus').innerHTML = '<strong>TEST Show current match status:</strong> ' + response1;
+                }
+            };
+            xhttp1.open("GET", "./DBfunctions.php?query=current_match_status", true);
+            xhttp1.send();
+
+
+
+            var xhttp2 = new XMLHttpRequest();
+            xhttp2.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    var response2 = JSON.parse(xhttp2.responseText);
+                    document.getElementById('playerAcards').innerHTML = '<strong>TEST Show the players A cards :</strong> ' + response2;
+                }
+            };
+            xhttp2.open("GET", "./DBfunctions.php?query=player_A_cards", true);
+            xhttp2.send(); 
+
+
+
+            var xhttp3 = new XMLHttpRequest();
+            xhttp3.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    var response3 = JSON.parse(xhttp3.responseText);
+                    document.getElementById('playerBcards').innerHTML = '<strong>TEST Show the players B cards :</strong> ' + response3;
+                }
+            };
+            xhttp3.open("GET", "./DBfunctions.php?query=player_B_cards", true);
+            xhttp3.send();
+            
+            
+            var xhttp4 = new XMLHttpRequest();
+            xhttp4.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    var response4 = JSON.parse(xhttp4.responseText);
+                    document.getElementById('playerAbank').innerHTML = '<strong>TEST Show the players A bank :</strong> ' + response4;                }
+            };
+            xhttp4.open("GET", "./DBfunctions.php?query=player_A_bank", true);
+            xhttp4.send();
+
+
+            var xhttp5 = new XMLHttpRequest();
+            xhttp5.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    var response5 = JSON.parse(xhttp5.responseText);
+                    document.getElementById('playerBbank').innerHTML = '<strong>TEST Show the players B bank :</strong> ' + response5;                }
+            };
+            xhttp5.open("GET", "./DBfunctions.php?query=player_B_bank", true);
+            xhttp5.send();
+
+
+            var xhttp6 = new XMLHttpRequest();
+            xhttp6.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    var response6 = JSON.parse(xhttp6.responseText);
+                    document.getElementById('MainStack').innerHTML = '<strong>TEST Show the cards of the main stack :</strong> ' + response6;                }
+            };
+            xhttp6.open("GET", "./DBfunctions.php?query=thrown_stack_cards", true);
+            xhttp6.send();
+
+
+            var xhttp7 = new XMLHttpRequest();
+            xhttp7.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    var response7 = JSON.parse(xhttp7.responseText);
+                    document.getElementById('names').innerHTML = '<strong>TEST Show the names of all the players :</strong> ' + response7;                }
+            };
+            xhttp7.open("GET", "./DBfunctions.php?query=player", true);
+            xhttp7.send();
+
+
+            var xhttp8 = new XMLHttpRequest();
+            xhttp8.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                   var response8 = xhttp8.responseText;
+                     console.log(response8);
+                   // console.log(xhttp.responseText);
+                    document.getElementById('playerAscore').innerHTML = '<strong>TEST Show/UPDATE the score of player A :</strong> ' + response8;                }
+            };
+            xhttp8.open("PUT", "./DBfunctions.php?query=player_A_scoreP&score=8", true);
+            xhttp8.send();
+
+            var xhttp9 = new XMLHttpRequest();
+            xhttp9.onreadystatechange = function() {
+                 if (this.readyState == 4 && this.status == 200) {
+                     var response9 = xhttp9.responseText;
+                        console.log(response9);
+                     document.getElementById('playerBscore').innerHTML = '<strong>TEST Show/UPDATE the score of player B :</strong> ' + response9;                }
+             };
+             xhttp9.open("PUT", "./DBfunctions.php?query=player_B_scoreP&score=9", true);
+             xhttp9.send();
+
+
+            
+            var xhttp10 = new XMLHttpRequest();
+            xhttp10.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    var response10 = JSON.parse(xhttp10.responseText);
+                    document.getElementById('playerturn').innerHTML = '<strong>TEST Show whose turn is :</strong> ' + response10;               
+                 }
+            };
+            xhttp10.open("GET", "./DBfunctions.php?query=player_turn", true);
+            xhttp10.send();
+
+            var xhttp11 = new XMLHttpRequest();
+            xhttp11.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    var response11 = xhttp11.responseText;
+                    console.log(response11);
+                    document.getElementById('CHplayerturn').innerHTML = '<strong>TEST Change the players turn :</strong> ' + response11;               
+                 }
+            };
+            xhttp11.open("GET", "./DBfunctions.php?query=CHplayer_turn", true);
+            xhttp11.send();
+            
+            var xhttp12 = new XMLHttpRequest();
+            xhttp12.onreadystatechange = function() {
+                 if (this.readyState == 4 && this.status == 200) {
+                     var response12 = xhttp12.responseText;
+                        console.log(response12);
+                     document.getElementById('searchPlayer').innerHTML = '<strong>TEST Show if the player exists :</strong> ' + response12;                }
+             };
+             xhttp12.open("POST", "./DBfunctions.php?query=Eplayer&name=hi", true);
+             xhttp12.send();
+
+             var xhttp13 = new XMLHttpRequest();
+            xhttp13.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    var response13 = JSON.parse(xhttp13.responseText);
+                   //console.log(response);
+                   // console.log(xhttp.responseText);
+                    document.getElementById('playerBScore').innerHTML = '<strong>TEST Show Player B score:</strong> ' + response13;
+                }
+            };
+            xhttp13.open("GET", "./DBfunctions.php?query=player_B_score", true);
+            xhttp13.send();
+            
+        }
+    </script>
+</head>
+<body onload="test()">
+    <h2><strong>Running TESTS</strong></h2>
+    <div id="playerAScore"></div>
+    <div id="matchStatus"></div>
+    <div id="playerAcards"></div>
+    <div id="playerBcards"></div>
+    <div id="playerAbank"></div>
+    <div id="playerBbank"></div>
+    <div id="MainStack"></div>
+    <div id="names"></div>
+    <div id="playerAscore"></div>
+    <div id="playerBscore"></div>
+    <div id="playerturn"></div>
+    <div id="CHplayerturn"></div>
+    <div id="searchPlayer"></div>
+    <div id="playerBScore"></div>
+</body>
+</html>
